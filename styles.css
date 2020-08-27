@@ -6,13 +6,13 @@
 }
 
 .main__text {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .menu__item {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .main__button {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
