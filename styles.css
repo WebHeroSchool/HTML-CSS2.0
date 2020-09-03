@@ -29,9 +29,14 @@
   padding-right: 0;
 }
 
+.menu__item_active::after {
+
+}
+
 .section {
   display: flex;
   justify-content: space-between;
+  /* flex-direction: row; */
 }
 
 .main__title {
@@ -43,8 +48,7 @@
   font-weight: bold;
   font-size: 66px;
   line-height: 87px;
-  padding-top: 206px;
-  padding-right: 191px;
+  padding-top: 140px;
   /* : #ECF3FF; */
 }
 
@@ -68,8 +72,12 @@
 }
 
 .image-content {
-  width: 50%;
-  height: 657px;
-  padding-top: 173px;
-  margin-right: 197px;
+  display: flex;
+  max-width: 100%;
+}
+
+.image-content__image {
+  width: 120%;
+  height: 100%;
+  padding-top: 30px;
 }
