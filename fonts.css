@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('fonts/PTSerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main__text, .menu__item, .main__button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main__title, .logo {
+  font-family: 'PTSerif', sans-serif;
+}

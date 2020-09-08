@@ -1,0 +1,128 @@
+.wrap {
+  margin: auto;
+  width: 80%;
+}
+
+.header {
+  padding: 33px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font: bold 24px/31px 'PT Serif', arial, helvetica, sans-serif;
+  position: relative;
+  padding-left: 44px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo__circle {
+  width: 28px;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  border-radius: 50%;
+  opacity: .7;
+}
+
+.logo__circle_color_dark-blue {
+  background: #0056ec;
+}
+
+.logo__circle_color_blue {
+  background: #c8dbfb;
+  left: 8px;
+  top: 75%;
+}
+
+.menu__item {
+  margin-right: 26px;
+  text-decoration: none;
+  color: #000;
+  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+  position: relative;
+  transition: opacity .5s;
+}
+
+.menu__item:hover {
+  opacity: .5;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__item::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 3px;
+  background: #0056ec;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+.menu__item:hover::after, .menu__item_active::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+}
+
+.main__title {
+  display: flex;
+  align-items: center;
+  width: 567px;
+  height: 255px;
+  font-family: 'PT Serif', sans-serif;
+  font-weight: bold;
+  font-size: 66px;
+  line-height: 87px;
+  padding-top: 218px;
+  margin: 0 0 40px auto;
+  /* : #ecf3ff; */
+}
+
+.main__text {
+  width: 455px;
+  height: 52px;
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 30px;
+  margin: 0 0 10px 0;
+}
+
+.main__button {
+  width: 270px;
+  height: 57px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  background: #0056ec;
+  border-radius: 4px;
+  color: #fff;
+  padding-right: 15px;
+}
+
+.image-content {
+  display: flex;
+  max-width: 100vw;
+}
+
+.image-content__image {
+  width: 120%;
+  height: 100%;
+  padding-top: 30px;
+}
