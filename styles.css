@@ -119,12 +119,9 @@
   opacity: .6;
 }
 
-.menu__burger {
-  position: absolute;
-}
-
 #menu__toggle {
   opacity: 0;
+  z-index: 2;
 }
 
 #menu__toggle:checked ~ .menu__btn > span {
@@ -146,15 +143,14 @@
 .menu__btn {
   display: flex;
   align-items: flex-end;
-  position: fixed;
+  position: absolute;
   top: 32px;
   left: 85%;
   width: 25px;
   height: 17px;
   cursor: pointer;
-  z-index: 0;
+  z-index: 1;
 }
-
 
 
 @media (min-width:320px) and (max-width:480px) {
@@ -165,20 +161,21 @@
 
   .menu {
     display: block;
-    position: fixed;
+    position: absolute;
     visibility: hidden;
     top: 0;
-    right: -100%;
     width: 400px;
     height: 100%;
-    margin: 0;
-    padding: 186px 0;
+    right: -120%;
+    padding-top: 186px 0;
     list-style: none;
+    -webkit-font-smoothing: antialiased;
     transition-duration: .25s;
   }
 
   #menu__toggle:checked ~ .menu {
     visibility: visible;
+    transform: none;
   }
 
   .logo__text {
