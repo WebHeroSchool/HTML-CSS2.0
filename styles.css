@@ -42,6 +42,19 @@
   top: 75%;
 }
 
+.logo__circle_color_blue:hover {
+  animation: spin 5s linear infinite;;
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(0px) translateY(0px);
+  }
+  to {
+    transform: translateX(20px) translateY(0px);
+  }
+  }
+
 .menu {
   display: flex;
   justify-content: space-around;
@@ -117,6 +130,18 @@
 
 .main__button:hover {
   opacity: .6;
+  animation: glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+    border-color: rgba(0,0,255,0.5);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
+    border-color: rgba(0,0,255,1.0);
+  }
 }
 
 #menu__toggle {
@@ -140,7 +165,7 @@
   /* left: 0; */
 }
 
-.menu__btn {
+#menu__toggle span {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -210,12 +235,11 @@
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
 
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+  span,
+  span::before,
+  span::after {
   display: block;
   position: absolute;
-  width: 100%;
   height: 3px;
   background-color: #0056ec;
   transition-duration: .25s;
