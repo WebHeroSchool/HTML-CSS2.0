@@ -53,7 +53,7 @@
   to {
     transform: translateX(20px) translateY(0px);
   }
-  }
+}
 
 .menu {
   display: flex;
@@ -146,9 +146,7 @@
 
 #menu__toggle {
   opacity: 0;
-  z-index: 2;
 }
-
 #menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(-45deg);
 }
@@ -162,10 +160,8 @@
 }
 #menu__toggle:checked ~ .menu {
   visibility: visible;
-  /* left: 0; */
 }
-
-#menu__toggle span {
+.menu__btn {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -177,30 +173,27 @@
   z-index: 1;
 }
 
-
 @media (min-width:320px) and (max-width:480px) {
   .wrap {
-    margin: 0 auto;
     width: 85%;
   }
 
   .menu {
     display: block;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     top: 0;
+    right: -150%;
     width: 400px;
     height: 100%;
-    right: -120%;
-    padding-top: 186px 0;
+    margin: 0;
+    padding: 186px 0;
     list-style: none;
-    -webkit-font-smoothing: antialiased;
     transition-duration: .25s;
   }
 
-  #menu__toggle:checked ~ .menu {
-    visibility: visible;
-    transform: none;
+  .menu__btn {
+    display: flex;
   }
 
   .logo__text {
@@ -235,9 +228,9 @@
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
 
-  span,
-  span::before,
-  span::after {
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
   display: block;
   position: absolute;
   height: 3px;
@@ -258,7 +251,6 @@
 
 @media (min-width:481px) and (max-width:640px) {
   .wrap {
-    margin: 0 auto;
     width: 85%;
   }
 
@@ -274,10 +266,6 @@
     padding: 186px 0;
     list-style: none;
     transition-duration: .25s;
-  }
-
-  #menu__toggle:checked ~ .menu {
-    visibility: visible;
   }
 
   .logo__text {
@@ -336,7 +324,6 @@
 
 @media (min-width: 641px) and (max-width:767px) {
   .wrap {
-    margin: 0 auto;
     width: 85%;
   }
 
@@ -352,10 +339,6 @@
     padding: 186px 0;
     list-style: none;
     transition-duration: .25s;
-  }
-
-  #menu__toggle:checked ~ .menu {
-    visibility: visible;
   }
 
   .logo__text {
@@ -414,7 +397,6 @@
 
 @media (min-width: 768px) and (max-width:960px){
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
@@ -440,7 +422,6 @@
 
 @media (min-width:961px) and (max-width:1024px) {
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
@@ -467,7 +448,6 @@
 
 @media (min-width:1025px) and (max-width:1280px) {
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
