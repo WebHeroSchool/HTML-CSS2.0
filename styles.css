@@ -104,7 +104,7 @@
 .main__title {
   padding-right: 63%;
   font: bold 50px/66px 'PT Serif', arial, helvetica, sans-serif;
-  margin: 0 0 40px 0;
+  margin: 0 0 38px 0;
 }
 
 .main__back-color {
@@ -124,7 +124,7 @@
   background: #0056ec;
   border-radius: 4px;
   color: #fff;
-  padding: 14px 16px;
+  padding: 13px 16px 14px 9px;
   transition: opacity .5s;
 }
 
@@ -485,6 +485,15 @@
 }
 
 @media (min-width:1281px) and (max-width:1440px) {
+  .wrap {
+    width: 68%;
+  }
+
+  .header {
+    padding-top: 33px;
+    margin-left: -3px;
+  }
+
   .menu__item {
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
@@ -494,12 +503,17 @@
   }
 
   .main {
-    background-size: 52%;
+    background-size: 56%;
     padding-top: 20px;
+    margin-left: -3px;
   }
 
   .main__title {
     padding-right: 50%;
+  }
+
+  .main__subtitle {
+    padding-right: 60%;
   }
 }
 
