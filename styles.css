@@ -53,7 +53,7 @@
   to {
     transform: translateX(20px) translateY(0px);
   }
-  }
+}
 
 .menu {
   display: flex;
@@ -104,7 +104,7 @@
 .main__title {
   padding-right: 63%;
   font: bold 50px/66px 'PT Serif', arial, helvetica, sans-serif;
-  margin: 0 0 40px 0;
+  margin: 0 0 38px 0;
 }
 
 .main__back-color {
@@ -124,7 +124,7 @@
   background: #0056ec;
   border-radius: 4px;
   color: #fff;
-  padding: 14px 16px;
+  padding: 13px 16px 14px 9px;
   transition: opacity .5s;
 }
 
@@ -146,9 +146,7 @@
 
 #menu__toggle {
   opacity: 0;
-  z-index: 2;
 }
-
 #menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(-45deg);
 }
@@ -162,10 +160,8 @@
 }
 #menu__toggle:checked ~ .menu {
   visibility: visible;
-  /* left: 0; */
 }
-
-#menu__toggle span {
+.menu__btn {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -177,30 +173,32 @@
   z-index: 1;
 }
 
-
 @media (min-width:320px) and (max-width:480px) {
   .wrap {
-    margin: 0 auto;
-    width: 85%;
+    width: 88%;
   }
 
   .menu {
     display: block;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     top: 0;
+    right: -150%;
     width: 400px;
     height: 100%;
-    right: -120%;
-    padding-top: 186px 0;
+    margin: 0;
+    padding: 186px 0;
     list-style: none;
-    -webkit-font-smoothing: antialiased;
     transition-duration: .25s;
   }
 
-  #menu__toggle:checked ~ .menu {
+  .menu__btn {
+    display: flex;
     visibility: visible;
-    transform: none;
+  }
+
+  #menu__toggle {
+    display: none;
   }
 
   .logo__text {
@@ -209,18 +207,18 @@
 
   .header {
     margin-bottom: 38px;
-    padding: 22px 0 0 0;
+    padding: 20px 0 0 0;
   }
 
   .main {
-    padding: 83% 0 0 0;
-    background-size: 85%;
+    padding: 80% 0 0 0;
+    background-size: 88%;
     background-position: top center;
     text-align: center;
   }
 
   .main__title {
-    margin-bottom: 42px;
+    margin-bottom: 34px;
     font: bold 30px/40px 'PT Serif', arial, helvetica, sans-serif;
     padding: 0 10%;
   }
@@ -235,9 +233,9 @@
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
 
-  span,
-  span::before,
-  span::after {
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
   display: block;
   position: absolute;
   height: 3px;
@@ -258,7 +256,6 @@
 
 @media (min-width:481px) and (max-width:640px) {
   .wrap {
-    margin: 0 auto;
     width: 85%;
   }
 
@@ -274,10 +271,6 @@
     padding: 186px 0;
     list-style: none;
     transition-duration: .25s;
-  }
-
-  #menu__toggle:checked ~ .menu {
-    visibility: visible;
   }
 
   .logo__text {
@@ -297,7 +290,7 @@
   }
 
   .main__title {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
     font: bold 30px/40px 'PT Serif', arial, helvetica, sans-serif;
     padding: 0 20%;
   }
@@ -336,7 +329,6 @@
 
 @media (min-width: 641px) and (max-width:767px) {
   .wrap {
-    margin: 0 auto;
     width: 85%;
   }
 
@@ -352,10 +344,6 @@
     padding: 186px 0;
     list-style: none;
     transition-duration: .25s;
-  }
-
-  #menu__toggle:checked ~ .menu {
-    visibility: visible;
   }
 
   .logo__text {
@@ -414,7 +402,6 @@
 
 @media (min-width: 768px) and (max-width:960px){
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
@@ -440,7 +427,6 @@
 
 @media (min-width:961px) and (max-width:1024px) {
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
@@ -467,12 +453,15 @@
 
 @media (min-width:1025px) and (max-width:1280px) {
   .wrap {
-    margin: 0 auto;
     width: 90%;
   }
 
   .menu__item {
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+  }
+
+  #menu__toggle {
+    display: none;
   }
 
   .main {
@@ -496,17 +485,35 @@
 }
 
 @media (min-width:1281px) and (max-width:1440px) {
+  .wrap {
+    width: 68%;
+  }
+
+  .header {
+    padding-top: 33px;
+    margin-left: -3px;
+  }
+
   .menu__item {
     font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
 
+  #menu__toggle {
+    display: none;
+  }
+
   .main {
-    background-size: 52%;
+    background-size: 56%;
     padding-top: 20px;
+    margin-left: -3px;
   }
 
   .main__title {
     padding-right: 50%;
+  }
+
+  .main__subtitle {
+    padding-right: 60%;
   }
 }
 
@@ -540,6 +547,10 @@
 @media (min-width:1601px){
   .header {
     margin-bottom: 170px;
+  }
+
+  #menu__toggle {
+    display: none;
   }
 
   .main {
